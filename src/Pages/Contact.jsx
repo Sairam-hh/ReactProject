@@ -46,15 +46,22 @@ export default function Contact() {
       display: "grid",
       gridTemplateColumns: "1fr 1fr",
       gap: "15px",
-      maxWidth: "900px",
+      maxWidth: "950px",
       margin: "0 auto",
     },
 
     card: {
       background: "#fff",
-      padding: "18px",
+      padding: "16px",
       borderRadius: "14px",
       boxShadow: "0 8px 20px rgba(0,0,0,0.08)",
+    },
+
+    sectionTitle: {
+      fontSize: "14px",
+      fontWeight: "bold",
+      marginBottom: "8px",
+      color: "#222",
     },
 
     formGroup: {
@@ -108,16 +115,16 @@ export default function Contact() {
       borderLeft: "3px solid #f97316",
       fontSize: "12px",
       color: "#555",
-      lineHeight: "1.5",
     },
 
     faqBox: {
-      marginTop: "10px",
+      marginTop: "8px",
       background: "#fff7ed",
       padding: "10px",
       borderRadius: "10px",
       fontSize: "12px",
       color: "#555",
+      lineHeight: "1.5",
     },
   };
 
@@ -129,17 +136,36 @@ export default function Contact() {
         <span style={styles.label}>📩 Contact Us</span>
         <h2 style={styles.heading}>Get in Touch</h2>
         <div style={styles.subText}>
-          We’re here to help you 24/7 with orders, feedback & support
+          We’re here 24/7 for orders, feedback & support 🍽️
         </div>
       </div>
 
       {/* GRID */}
       <div style={styles.grid}>
         
-        {/* FORM */}
+        {/* FORM SIDE */}
         <form style={styles.card} onSubmit={handleSubmit}>
-          <h3 style={{ marginBottom: "10px" }}>Send Message</h3>
+          
+          {/* EXTRA CONTENT (NEW ADDED PART) */}
+          <div style={{ marginBottom: "12px" }}>
+            <h3 style={styles.sectionTitle}>💬 Send us a message</h3>
 
+            <p style={styles.faqBox}>
+              We’d love to hear from you! Whether it’s feedback, complaints,
+              or food suggestions — our team is always ready to improve your
+              FoodieHub experience.
+            </p>
+
+            <div style={styles.faqBox}>
+              💡 Tip: Give clear details so we can respond faster and help better.
+            </div>
+
+            <div style={{ fontSize: "11px", color: "#888", marginTop: "6px" }}>
+              ⚡ Response time: 1–2 hours (working time)
+            </div>
+          </div>
+
+          {/* INPUTS */}
           <div style={styles.formGroup}>
             <label style={styles.labelText}>Name</label>
             <input
@@ -166,43 +192,48 @@ export default function Contact() {
             />
           </div>
 
+          <p style={{ fontSize: "11px", color: "#777" }}>
+            📩 Your feedback helps us improve food quality, delivery speed &
+            service experience.
+          </p>
+
           <button style={styles.button} type="submit">
             Send Message 🍽️
           </button>
-
-          <div style={styles.faqBox}>
-            💡 Tip: We usually respond within 1–2 hours during working time.
-          </div>
         </form>
 
-        {/* INFO */}
+        {/* INFO SIDE */}
         <div style={styles.card}>
-          <h3 style={{ marginBottom: "10px" }}>Restaurant Info</h3>
+          
+          <h3 style={styles.sectionTitle}>Restaurant Info</h3>
 
-          <div style={styles.chip}>
-            📍 <strong>Address</strong><br />
-            12 Gourmet Lane, Food City, FC 400001
-          </div>
+          <div style={styles.chip}>📍 12 Gourmet Lane, Food City</div>
+          <div style={styles.chip}>📞 +91 7995358828</div>
+          <div style={styles.chip}>📧 support@foodiehub.in</div>
+          <div style={styles.chip}>⏰ 10:00 AM – 11:00 PM</div>
 
-          <div style={styles.chip}>
-            📞 <strong>Phone</strong><br />
-            +91 7995358828
-          </div>
+          <h3 style={styles.sectionTitle}>🚀 Support Highlights</h3>
+          <div style={styles.faqBox}>✔ Fast response (1–2 hours)</div>
+          <div style={styles.faqBox}>✔ Refund & order help</div>
+          <div style={styles.faqBox}>✔ 24/7 customer support</div>
 
-          <div style={styles.chip}>
-            📧 <strong>Email</strong><br />
-            support@foodiehub.in
-          </div>
+          <h3 style={styles.sectionTitle}>⚡ Quick Help</h3>
+          <div style={styles.chip}>📦 Track Order</div>
+          <div style={styles.chip}>💸 Refund Request</div>
+          <div style={styles.chip}>🍽 Report Issue</div>
 
-          <div style={styles.chip}>
-            ⏰ <strong>Hours</strong><br />
-            Mon – Sun · 10:00 AM – 11:00 PM
+          <h3 style={styles.sectionTitle}>❓ FAQ</h3>
+
+          <div style={styles.faqBox}>
+            <strong>Delivery time?</strong><br />
+            30–40 minutes normally.
           </div>
 
           <div style={styles.faqBox}>
-            ❓ <strong>Need help?</strong><br />
-            Track orders, refunds, or delivery issues — we’ve got you covered.
+            <strong>Refund time?</strong><br />
+            2–5 business days.
           </div>
+
         </div>
 
       </div>

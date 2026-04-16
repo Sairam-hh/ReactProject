@@ -198,7 +198,7 @@ export default function Profile() {
               }}
             />
           ) : (
-            user.charAt(0).toUpperCase()
+            user.charAt(0).toUpperCase() + user.charAt(7).toUpperCase()
           )}
         </div>
 
